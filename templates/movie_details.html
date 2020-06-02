@@ -6,7 +6,20 @@
 <h1>{{ movie.title }}</h1>
 
 <p>
-  {{ movie.overview }}
+    <div>
+<b>Movie ratings:</b> 
+{% for rating in movie_ratings %}
+    {{rating[0]}}, 
+{% endfor %}
+
+    </div>
+    <div> <b>Movie overview:</b> 
+ {{ movie.overview }}
+</div>
+}
+}
+}
+}
 </p>
 
 <img src="{{ movie.poster_path }}">

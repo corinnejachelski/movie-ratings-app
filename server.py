@@ -81,8 +81,9 @@ def show_movie(movie_id):
     """Show detals on a particular movie"""
 
     movie = crud.get_movie_by_id(movie_id)
+    movie_ratings = crud.get_average_rating(movie)
 
-    return render_template('movie_details.html', movie=movie)
+    return render_template('movie_details.html', movie=movie, movie_ratings=movie_ratings)
 
 
 if __name__ == '__main__':
